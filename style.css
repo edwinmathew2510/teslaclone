@@ -2,6 +2,7 @@
     margin: 0%;
     padding: 0%;
     font-family: Lato,Arial, Helvetica, sans-serif;
+    transition: 0.25s all;
    
 }
 body{
@@ -89,26 +90,29 @@ section{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    text-align: center;
-    /* margin-top: 30px; */
+    gap: 20px;
+    
+}
+.bt1,.bt2{
+    font-size: 16px;
+    padding: 10px 80px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 .bt1{
-    font-size: 16px;
-    /* font-weight:500; */
-    padding: 10px 100px;
+
     background-color: royalblue;
     color: white;
-    margin-right: 20px;
-    border-radius: 5px;
+
 }
 .bt2{
-    font-size: 16px;
-    /* font-weight:500; */
-    padding: 10px 100px;
+
     background-color: rgb(255, 255, 255);
     color: gray;
-    margin-right: 20px;
-    border-radius: 5px;
+
+}
+.bt1,.bt2:hover{
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 footer{
     height: 70px;
@@ -143,6 +147,17 @@ footer{
     color: grey;
 
 }
+@media (max-width: 1000px){
+    .buttons {
+        flex-direction: row;
+        align-items: center;
+      }
+    
+      .bt1, .bt2 {
+          padding: 10px 60px;
+        margin-bottom: 0.5rem;
+      }
+  }
 @media (max-width: 850px) {
     
   
@@ -180,7 +195,8 @@ footer{
     }
   
     .bt1, .bt2 {
-      width: 90%;
+        flex-direction: row;
+        padding: 10px 50px;
       margin-bottom: 0.5rem;
     }
   
@@ -189,4 +205,4 @@ footer{
       gap: 0.5rem;
     }
   }
-  
+ 
